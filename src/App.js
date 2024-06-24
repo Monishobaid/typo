@@ -6,11 +6,11 @@ import './index.css';
 ChartJS.register(CategoryScale, LinearScale, PointElement, LineElement, Title, Tooltip, Legend);
 
 const paragraphs = [
-  "The quick brown fox jumps over the lazy dog.",
-  "Pack my box with five dozen liquor jugs.",
-  "How vexingly quick daft zebras jump!",
-  "The five boxing wizards jump quickly.",
-  "Jackdaws love my big sphinx of quartz."
+  "The quick brown fox jumps over the lazy dog. This agile creature, with its sleek fur and keen eyes, easily leaps over the lethargic canine who barely lifts its head in response. The scene is a testament to the fox's nimbleness and the dog's serene, untroubled existence. In the forest, such moments are common, where the lively meet the languid in a dance of nature.",
+  "Pack my box with five dozen liquor jugs. Each jug, carefully selected for its unique flavor and origin, is placed with precision into the wooden crate. The bottles clink gently against each other, promising an array of tastes from sweet to strong. The task is a meticulous one, ensuring no jug is out of place and that each one reaches its destination intact, ready to bring joy to those who appreciate fine spirits",
+  "How vexingly quick daft zebras jump! In the open savanna, the striped creatures display their surprising agility, darting and leaping with unexpected grace. Their playful antics are a challenge to predict, as they seem to revel in their own unpredictability. The observers can only marvel at their speed and the seamless coordination in their movements, a true spectacle of nature's wonders.",
+  "The five boxing wizards jump quickly. These magical beings, cloaked in robes and wielding wands, move with astonishing speed and agility. Their jumps are synchronized, creating a mesmerizing display of athleticism and sorcery. Each leap is accompanied by bursts of light and color, showcasing their formidable powers. The audience watches in awe as the wizards continue their spellbinding performance",
+  "Jackdaws love my big sphinx of quartz. The shiny, enigmatic statue in the garden is a magnet for these intelligent birds. They perch on its shoulders and peck at its gleaming surface, intrigued by the sparkling mineral. The sphinx, with its mysterious smile, stands as a silent guardian, while the jackdaws chatter and play around it, adding life and movement to the tranquil scene"
 ];
 
 const durations = [
