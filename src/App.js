@@ -33,6 +33,12 @@ function TypingTest() {
   const inputRef = useRef(null);
 
   useEffect(() => {
+    /**
+     * Retrieves the stored typing attempts from the local storage.
+     * If no attempts are found, an empty array is returned.
+     *
+     * @returns {Array} The stored typing attempts.
+     */
     const storedAttempts = JSON.parse(localStorage.getItem('typingAttempts') || '[]');
     setAttempts(storedAttempts);
   }, []);
@@ -75,12 +81,23 @@ function TypingTest() {
     localStorage.setItem('typingAttempts', JSON.stringify(updatedAttempts));
   };
 
+  /**
+   * Calculates the Words Per Minute (WPM) based on the given text and time elapsed.
+   * @param {string} text - The input text to calculate WPM for.
+   * @param {number} timeElapsed - The time elapsed in seconds.
+   * @returns {number} The calculated WPM (rounded to the nearest whole number).
+   */
   const calculateWPM = (text, timeElapsed) => {
     const words = text.trim().split(/\s+/).length;
     const minutes = timeElapsed / 60;
     return Math.round(words / minutes);
   };
 
+  /**
+   * Handles the change event of the input field.
+   * Updates the text, correct count, and WPM based on the new input.
+   * @param {Object} e - The event object.
+   */
   const handleChange = (e) => {
     if (isRunning) {
       const newText = e.target.value;
@@ -93,6 +110,12 @@ function TypingTest() {
     }
   };
 
+  /**
+   * Renders the target text with each character wrapped in a <span> element.
+   * The className of each <span> element is determined based on whether the character is correct or incorrect.
+   * 
+   * @returns {JSX.Element[]} An array of <span> elements representing the target text.
+   */
   const renderTargetText = () => {
     return targetText.split('').map((char, index) => {
       let className = 'neutral';
@@ -103,6 +126,11 @@ function TypingTest() {
     });
   };
 
+  /**
+   * Handles the change in duration.
+   * 
+   * @param {Event} e - The event object.
+   */
   const handleDurationChange = (e) => {
     setSelectedDuration(Number(e.target.value));
   };
